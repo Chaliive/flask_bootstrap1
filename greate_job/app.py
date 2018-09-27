@@ -6,7 +6,6 @@
 # @Note
 import time
 import os
-import subprocess
 import pymysql
 from flask import Flask, request
 from flask import render_template
