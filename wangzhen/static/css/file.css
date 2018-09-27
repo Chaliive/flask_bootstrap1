@@ -1,0 +1,20 @@
+.aaaa {
+text-align: center;
+color: red;
+}
+.form_edit{
+	float: left;
+	margin-left: 200px;
+	margin-right: 220px;
+	margin-bottom: 100px;
+}
+.form_regist{
+float: left; 
+margin-right:220px ;
+margin-left: 180px;
+}
+.topic_div{
+float: left; 
+margin-right:220px;
+margin-left: 180px;
+}

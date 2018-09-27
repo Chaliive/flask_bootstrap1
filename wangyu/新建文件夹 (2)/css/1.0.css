@@ -1,0 +1,182 @@
+   *{
+	margin: 0;
+    padding: 0;
+}
+.content{
+        height: 1000px;
+        width: 30%;
+        float: left;
+        background: #545050;
+}
+.right{
+        width: 70%;
+        height: 1000px;
+        background: #505A2E;       
+        float: right;
+        background: url(images/225566.jpg) no-repeat;
+}
+.content .box{
+	width: 200px;
+	height:200px;
+	float: left;
+	background: green;
+	margin:30px 50px 8px 60px;
+}
+.box-mission .icon{
+	width: 100px;
+	height: 100px;
+    display: block;
+    background:pink url(images/zhanjian.jpg) no-repeat;
+    margin: 0 auto;
+    transition:all 0.2s;
+    -webkit-transition:all 0.2s
+    -o-transition:all 0.2s
+    -moz-transition:all 0.2s
+}
+.box-mission .icon:hover{
+	transform:scale(1.2) rotate(360deg);
+	-webkit-transform:scale(1.2) rotate(360deg);
+	-o-transform:scale(1.2) rotate(360deg);
+	-moz-transform:scale(1.2) rotate(360deg);
+}
+.box-play .icon{
+	width:  100px;
+	height: 100px;
+    display: block;
+    background: url(images/7788.jpg) no-repeat;
+    margin: 0 auto;
+    transition:all 0.2s;
+    -webkit-transition:all 0.2s
+    /*-o-transition:all 0.2s
+    -moz-transition:all 0.2s*/
+}
+
+.box-play .icon:hover{
+	transform:scale(1.2) rotate(360deg);
+	-webkit-transform:scale(1.2) rotate(360deg);
+	/*-o-transform:scale(1.2) rotate(360deg);
+	-moz-transform:scale(1.2) rotate(360deg);*/
+}
+.box-touch .icon{
+	width:  100px;
+	height: 100px;
+    display: block;
+    background:  url(images/tanke.jpg) no-repeat;
+    margin: 0 auto;
+    transition:all 0.2s;
+    -webkit-transition:all 0.2s
+    /*-o-transition:all 0.2s
+    -moz-transition:all 0.2s*/
+}
+
+.box-touch .icon:hover{
+	transform:scale(1.2) rotate(360deg);
+	-webkit-transform:scale(1.2) rotate(360deg);
+
+	/*-o-transform:scale(1.2) rotate(360deg);
+	-moz-transform:scale(1.2) rotate(360deg);*/
+}
+.box .button{
+	width: 120px;
+	height: 45px;
+	display: block;
+	background:  url(images/allow333.png) no-repeat;
+	line-height: 45px;
+	margin: 20px auto;
+	font-family: "闅朵功";
+	font-size: 15px;
+	font-weight: bolder;
+	color: #2ecc71;
+	text-decoration: none;
+	
+	padding-left: 20px;
+	border: 2px solid rgba(255,255,255,0.8);/*255.255.255鏄櫧鑹诧紱0.8鏄竟妗嗛�忔槑搴�*/
+	transition:all 0.2s ease;/*0.2s閲屽畬鎴�*/
+	-webkit-transition:all 0.2s ease;
+	/*-o-transition:all 0.2s ease;
+	-moz-transition:all 0.2s ease;*/
+	position: relative;
+
+}
+
+.box .button:hover{
+	background-position: 20px center;/* 鑳屾櫙鍥剧墖鍚戝彸绉诲姩20px*/
+	border:2px solid rgba(255,255,255,1);
+	color: red;
+}
+.box .line{
+	background-color: #FFF;
+	display: block;
+	position: absolute;
+	transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+}
+/*璁剧疆椤堕儴鐨勭嚎鏉★紝浠庡乏鍚戝彸杩囨浮鍒版寜閽殑涓婅竟妗嗕綅缃�
+  楂樺害涓嶅彉 2px
+  瀹藉害 0~142px
+
+*/
+
+.box .line-top{
+	width: 0px;
+	height: 2px;
+	top: -2px;/*姝ｅ�煎悜涓嬶紱璐熷�煎悜涓�*/
+	left: -100px;
+}
+.box .button:hover .line-top{
+	width: 142px;
+	left:-2px;
+}
+/*璁剧疆搴曢儴鐨勭嚎鏉★紝浠庡彸鍚戝乏杩囨浮鍒版寜閽殑涓嬭竟妗嗕綅缃�
+  楂樺害涓嶅彉 2px
+  瀹藉害 0~ 142px
+
+*/
+
+.box .line-bottom{
+	width: 0px;
+	height: 2px;
+    bottom: -2px; 
+    right: -100%;
+}
+
+.box .button:hover .line-bottom{
+	width: 142px;
+	right: -2px;
+}
+/*璁剧疆宸﹂儴鐨勭嚎鏉★紝浠庝笅鍚戜笂杩囨浮鍒版寜閽殑宸﹁竟妗嗕綅缃�
+  瀹藉害涓嶅彉 2px
+  楂樺害涓嶅彉 0~49px
+   
+
+*/
+.box .line-left{
+	width: 2px;
+	height: 0px;	
+    bottom: -100%; 
+    left: -2px;
+}
+
+.box .button:hover .line-left{
+	height: 49px;
+	bottom: -2px;
+}
+/*璁剧疆鍙抽儴鐨勭嚎鏉★紝浠庝笂鍚戜笅杩囨浮鍒版寜閽殑鍙宠竟妗嗕綅缃�
+  瀹藉害涓嶅彉 2px
+  楂樺害涓嶅彉 0~49px
+   
+
+*/
+.box .line-right{
+	width: 2px;
+	height: 0px;
+    top: -100%; 
+    right: -2px;	
+}
+
+.box .button:hover .line-right{
+	height: 47px;
+	top: 0px; 
+}

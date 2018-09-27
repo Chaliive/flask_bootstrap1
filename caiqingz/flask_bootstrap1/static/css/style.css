@@ -1,0 +1,187 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+#box{
+	width: 1349px;
+	margin: 0 auto;
+	
+}
+
+#top{
+	width: 1349px;
+	height: 80px;
+}
+
+#header{
+	width: 1349px;
+	height: 140px;
+	background-color: #eceaea;
+}
+
+#w{
+	width: 1190px;
+	height: 30px;
+	background-color: #dcdcdc;
+	margin: 0 auto;
+}
+#x{
+	width: 1190px;
+	height: 140px;
+	background-color: #eceaea;
+	margin: 0 auto;
+}
+#y{
+	width: 1190px;
+	height: 80px;
+	margin: 0 auto;
+}
+#y>a{
+	font-size: 10px;
+	font-family: "微软雅黑";
+	margin-left: 10px;
+	color:  #6666;
+	text-decoration:none
+}
+#y>ul>li>a{
+	font-size: 15px;
+	font-family: "微软雅黑";
+	margin-left: 20px;
+	color: black;
+	text-decoration:none
+}
+#y>a:hover{
+	color: #c81623
+} 
+#y>ul>li>a:hover{
+	color: #c81623
+}
+#search-m{
+	width: 1190px;
+	height: 60px;
+	margin: 0 auto;
+}
+#ss>p>input{
+	width: 500px;
+	height: 30px;
+	
+}
+#shortcut{
+	width: 1349px;
+	height: 31px;
+	background-color: #dcdcdc;
+}
+#w>ul>li{
+	list-style-type: none;
+	display: inline-block;
+	text-align: right;
+
+}
+
+#y>ul>li{
+	list-style-type: none;
+	display: inline-block;
+	text-align:right
+}
+#w>ul{
+	float: right;
+}
+
+#w>ul>li>a{
+	/*文字大小*/
+	font-size: 10px;
+	/*文字字体*/
+	font-family: "微软雅黑";
+	text-align: center;
+	color:  #6666;
+	text-decoration:none
+}
+#w>ul>li>a:hover{
+	color: #c81623
+}
+
+#fs{
+	width: 1349px;
+	height: 480px;
+	background-color: #eceaea;
+}
+#lg{
+	width: 1190px;
+	height: 480px;
+	background-color: #eceaea;
+	margin: 0 auto;
+}
+#nav{
+	width: 190px;
+	height: 480px;
+	background-color: white;
+}
+#pic{
+	width:590px ;
+	height: 470px;
+	background-color: #eceaea;
+	position: absolute;
+	top:257px;
+	left: 280px;
+}
+#sp1{
+	width:190px ;
+	height: 150px;
+	background-color: #eceaea;
+	position: absolute;
+	top:257px;
+	left: 880px;
+}
+#sp2{
+	width:190px ;
+	height: 150px;
+	background-color: #eceaea;
+	position: absolute;
+	top:417px;
+	left: 880px;
+}
+#sp3{
+	width:190px ;
+	height: 150px;
+	background-color: #eceaea;
+	position: absolute;
+	top:577px;
+	left: 880px;
+}
+
+#logins{
+	width: 190px;
+	height: 470px;
+	background-color: #eceaea;
+	position: absolute;
+	top:257px ;
+	left: 1080px;
+}
+#nav>li{
+	list-style-type: none;
+	line-height: 26px;
+
+
+}
+#nav>li:hover{
+	background-color: gainsboro;
+}
+#nav>li>a{
+	font-size: 14px;
+	text-decoration:none;
+	color: grey;
+}
+#nav>li>a:hover{
+	color: #c81623
+}
+
+#nav>li{
+	margin-left: 15px
+}
+
+#footer{
+	width: 1349px;
+	height: 150px;
+	background-color: #eceaea;
+}

@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Guarantee  by Free CSS Templates</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="{{ url_for('static', filename='css/style_boke.css') }}" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+	<div id="logo">
+		<h1><a href="#">Guarantee  </a></h1>
+		<p><em> template design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a></em></p>
+		<form action='/login'>
+		<button>退出登陆</button>
+		</form>
+		
+	</div>
+	<hr />
+	<div id="page">
+		<div id="content">
+		{% for i in u %}
+		  <div class="post">
+				<h2 class="title"><a href="#">{{ i[0] }} </a></h2>
+				<p class="meta">{{ i[1] }}-{{ i[2] }}/{{ i[3] }}/{{ i[4] }}/{{ i[5] }}/{{ i[6] }}</p>
+				<div class="entry">
+					<p>职位诱惑：{{ i[7] }}</p>
+					<p>{{ i[8] }}</p>
+					<div><p style='text-align:right'>公司类型：{{ i[9] }}</p></div>
+			</div>
+		  </div>
+		{% endfor %}
+		</div><!-- end #content -->
+		
+	
+</body>
+</html>
