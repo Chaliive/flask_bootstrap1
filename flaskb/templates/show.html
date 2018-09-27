@@ -1,0 +1,71 @@
+<html>
+    <head> 
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<script src = "{{url_for('static',filename = 'echart/echarts.js')}}"></script>
+<script src = "{{url_for('static',filename = 'echart/infogaphic.js')}}"></script>
+</head><title>info</title>
+   
+ <body>
+   
+ <div id="business_load" style="width: 600px;height:400px;"></div>
+ <div id="bar" style="width: 600px;height:400px;"></div>
+<script type="text/javascript">
+        
+        var option = {
+            title:{
+                text:'ECharts Infomation'
+            },
+            tooltip:{},
+            legend:{
+                data:['from beijng']
+            },
+            xAxis:{
+                data:["mem_total","mem_used","mem_free","mem_percent"]
+            },
+            yAxis:{
+
+            },
+            series:[{
+                name:'total',
+                type:'line',
+                data:[{{info['mem_total']}},{{info['mem_used']}},{{info['mem_free']}},{{info['mem_percent']}}]
+            }]
+        };
+    
+        var myChart = echarts.init(document.getElementById('business_load'));
+
+     
+        myChart.setOption(option);
+    </script>
+
+<script type="text/javascript">
+        
+        var option = {
+            title:{
+                text:'ECharts Infomation'
+            },
+            tooltip:{},
+            legend:{
+                data:['from beijng']
+            },
+            xAxis:{
+                data:["mem_total","mem_used","mem_free","mem_percent"]
+            },
+            yAxis:{
+
+            },
+            series:[{
+                name:'total',
+                type:'bar',
+                data:[{{info['mem_total']}},{{info['mem_used']}},{{info['mem_free']}},{{info['mem_percent']}}]
+            }]
+        };
+    
+        var myChart = echarts.init(document.getElementById('bar'));
+
+     
+        myChart.setOption(option);
+    </script>
+     
+</body>
+</html>
