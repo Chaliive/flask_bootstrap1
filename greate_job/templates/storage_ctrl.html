@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        a {
+            text-decoration: none;
+            color: #000;
+            font-size:28px;
+            }
+        table
+        {
+            border-collapse: collapse;
+            margin: 0 auto;
+            text-align: center;
+        }
+        table td, table th
+        {
+            border: 1px solid #cad9ea;
+            color: #666;
+            height: 30px;
+        }
+        table thead th
+        {
+            background-color: #CCE8EB;
+            width: 100px;
+        }
+        table tr:nth-child(odd)
+        {
+            background: #fff;
+        }
+        table tr:nth-child(even)
+        {
+            background: #F5FAFA;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>资源监控系统</title>
+    <!--<meta http-equiv="refresh" content="5;url=#">-->
+    <script src = "{{url_for('static',filename = 'echart/echarts.js')}}"></script>
+    <script src = "{{url_for('static',filename = 'echart/infogaphic.js')}}"></script>
+</head>
+<body>
+    <table>
+        <tr style="background:#C6E2FF">
+            <td><a href="/storage">进程</a> </td>
+            <td><a>|</a> </td>
+            <td><a href="performance">性能</a> </td>
+            <td><a>|</a> </td>
+            <td><a href="zabbix">ZABBIX</a> </td>
+        </tr>
+    </table>
+    <br>
+    <table style="border-width: 1px;border-color: #666666;border-collapse: collapse;" >
+        <tr>
+            <th>pro_name</th>
+            <th>pid</th>
+            <th>pro_status</th>
+            <th>pro_mmr_per</th>
+            <th>pro_num_thr</th>
+            <th>v_time</th>
+        </tr>
+        {% for i in pro_res %}
+            <tr style="color=grey">
+                <td>{{ i[0] }}</td>
+                <td>{{ i[1] }}</td>
+                <td>{{ i[2] }}</td>
+                <td>{{ i[3] }}</td>
+                <td>{{ i[4] }}</td>
+                <td>{{ i[5] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

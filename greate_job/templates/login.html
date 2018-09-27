@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% block css %}
+ <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/file.css')}}" />
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"/>
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-theme.min.css') }}"/>
+ {% endblock %}
+ {% block content %}
+ <div class='aaaa'>
+ <p><h1>{{mess}}</h1></p>
+ </div> 
+ <br>
+ <div class="form_regist">
+		<h1 >请先登录论坛</h1>
+		<form id="loginForm" action="login" method="POST">
+		  <table >
+			  <tr>
+			  <td>昵称：</td>
+			  <td><div class="form-group">
+							<div class="input-group">
+								<div class="input-group-addon"><i class="fa fa-asterisk"></i></div>
+								<input type="text" class="form-control" name="username" placeholder="Username">
+							</div>
+						</div></td>
+			  </tr>
+			 
+			  <tr>
+				<td>密码：</td>
+				<td><div class="form-group">
+							<div class="input-group">
+								<div class="input-group-addon"><i class="fa fa-asterisk"></i></div>
+								<input type="password" class="form-control" name="pwd" placeholder="Password">
+							</div>
+						</div></td>
+				</tr>
+			 
+				<tr>
+					<td>
+					<button class="btn btn-success  btn-block" type="submit">
+							<b>登录</b>
+						</button>
+                        <input type="hidden" name="next" value="{{ next }}" />
+                        <h4 style="color: red"><b>{{ login_err }}</b></h4>
+					</td>	
+				</tr>
+		   </table>
+		</form>
+		</div>             
+ {% endblock %}
+  {% block js %}
+ <!--jQuery [ REQUIRED ]-->
+	<script src="/static/js/jquery-2.1.1.min.js"></script>
+	<!--BootstrapJS [ RECOMMENDED ]-->
+	<script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/plugins/bootstrap-validator/bootstrapValidator.js"></script>
+    <!--<script src="https://cdn.bootcss.com/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script>-->
+  <script type="text/javascript">
+$(document).ready(function() {
+    $('#loginForm').bootstrapValidator({
+        message: 'This value is not valid',
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            username: {
+                message: 'The username is not valid',
+                validators: {
+                    notEmpty: {
+                        message: 'The username is required and cannot be empty'
+                    },
+                    stringLength: {
+                        min: 2,
+                        max: 30,
+                        message: 'The username must be more than 2 and less than 30 characters long'
+                    },
+                    regexp: {
+                        regexp: /^[a-zA-Z0-9_]+$/,
+                        message: 'The username can only consist of alphabetical, number and underscore'
+                    }
+                }
+            },
+            pwd:{
+                message: "The password is not valid",
+                validators:{
+                    notEmpty:{
+                        'message': "the password is required and cannot be empty"
+                    },
+                    stringLength:{
+                        min:3,
+                        max:30,
+                        message:'The password must be more than 3 and less than 30 characters long'
+                    },
+                }
+            },
+
+            email: {
+                validators: {
+                    notEmpty: {
+                        message: 'The email is required and cannot be empty'
+                    },
+                    emailAddress: {
+                        message: 'The input is not a valid email address'
+                    }
+                }
+            }
+        }
+    });
+});
+
+</script>
+  {% endblock %}
