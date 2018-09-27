@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>欢迎注册</title>
+
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-size: 12px;
+			background:
+		}
+
+		a {
+			text-decoration: none;
+			color: #2647CB;
+		}
+
+		a:hover {
+			text-decoration: underline;
+			color: red;
+		}
+
+		.wrap {
+			width: 390px;
+			height: 350px;
+			margin: 50px auto;
+			border: 1px solid #8A8989;
+			position: relative;
+		}
+
+		.main {
+			width: 350px;
+			height: 410px;
+			margin: 0 auto;
+		}
+
+		.header {
+			width: 100%;
+			height: 50px;
+			line-height: 50px;
+			background-color: rgb(247, 247, 247);
+			background-repeat: no-repeat;
+		}
+
+		.header h3 {
+			display: inline-block;
+			line-height: 50px;
+			margin-left: 50px;
+		}
+
+		.header span {
+			display: inline-block;
+			float: right;
+			margin: auto 15px;
+			font-size: 30px;
+		}
+
+		.inputDiv {
+			display: block;
+			width: 250px;
+			height: 40px;
+			margin: 10px auto;
+		}
+		.smBtn {
+			background: #2066C5;
+			color: white;
+			font-size: 18px;
+			font-weight: bold;
+			height: 50px;
+			border-radius: 4px;
+		}
+				<script>
+					function myFunction(){
+						alert("注册成功！！");
+					}
+				</script>
+	</style>
+</head>
+
+<body>
+	<!--账号密码注册 -->
+	<div class="wrap">
+		<div class="header">
+
+			<h3>欢迎注册</h3>
+			<span>×</span>
+		</div>
+		<div class="main">
+			<form action="/registerUser" method="get">
+				账号：
+				<input type="text" class="inputDiv" value="" name="username"/>
+				密码：
+				<input type="password" class="inputDiv" value="" name="newpwd"/>
+				确认密码：
+				<input type="password" class="inputDiv" value="" name="oldpwd"/>
+				<input name = 'gender' type = 'radio' value = ''>男<input name = 'gender' type = 'radio' value = ''>女
+				<!--<input type="submit" value="注册" class="inputDiv smBtn">-->
+				<a href="./login"><input type="submit" value="注册" onclick="myFunction()" class="inputDiv smBtn"></a>
+
+			</form>
+		</div>
+	</div>
+</body>
+</html>
