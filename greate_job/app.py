@@ -5,7 +5,8 @@
 # @Email: zhoucy567@qq.com
 # @Note
 import time
-import os  # subprocess
+import os
+import subprocess
 import pymysql
 from flask import Flask, request
 from flask import render_template
